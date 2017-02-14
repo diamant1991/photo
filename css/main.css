@@ -5422,6 +5422,10 @@ video{
   -o-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
 }
+img{
+  max-width: 100%;
+  height: auto;
+}
 .form-wrapp .form-group{
   margin-bottom: 20px;
 }

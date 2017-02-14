@@ -67,16 +67,14 @@ $(window).scroll(function(){
 		});
 
 		$('#slides').on('animated.slides', function () {
-         currentSlideIndex = $('#slides').superslides('current');
-         currentSlide = $('.slides-container > li')[currentSlideIndex];
-        $("video").each(function () { this.pause() });
-        currentVid = $(currentSlide).find("video")[0];                  
+        currentSlideIndex = $('#slides').superslides('current');
+        currentSlide = $('.slides-container > li')[currentSlideIndex];
+        player.pauseVideo();
+        currentVid = $(currentSlide).find('#player');                  
         if ($(currentVid).length) {     
-            $(currentVid)[0].oncanplaythrough = $(currentVid)[0].play() 
+            player.playVideo();
         }
-
-	});
-		
+		});
 });
    
 	/*----------------------------------------------------*/
